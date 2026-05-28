@@ -1,7 +1,8 @@
+
 # Human Supervision of Multi-Agent Reinforcement-Learning Teams:
 ## Selecting Teams across Environments with Varying Risk of Stag Illness
 
-**Student name:**  
+
 **Date:** 2026-01-11
 
 ---
@@ -81,42 +82,51 @@ The analysis was completed in **R** using the following packages:
 
 ## Main Analyses
 
-1. **Data import and cleaning**
-   - Excel sheets imported with `readxl`
-   - Column names cleaned with `janitor::clean_names()`
-   - Numeric variables coerced where needed
+### 1. Data Import and Cleaning
 
-2. **Descriptive statistics**
-   - Means
-   - Standard deviations
-   - Sample sizes by condition
+- Excel sheets imported using `readxl`
+- Column names cleaned using `janitor::clean_names()`
+- Numeric variables coerced where needed
+- Missing values handled as `NA`
 
-3. **Inferential statistics**
-   - One-way ANOVA
-   - Tukey HSD post-hoc tests
-   - Levene’s test
-   - Shapiro-Wilk test
-   - Bayesian ANOVA
+### 2. Descriptive Statistics
 
-4. **Subscale analysis**
-   - NASA-TLX subscales:
-     - mental demand
-     - physical demand
-     - temporal demand
-     - performance
-     - effort
-     - frustration
+- Means
+- Standard deviations
+- Sample sizes by condition
 
-5. **Correlation analysis**
-   - Pearson correlations between:
-     - performance
-     - NASA-TLX total
-     - SART total
-     - choice accuracy
-     - response time
+### 3. Inferential Statistics
 
-6. **Reliability**
-   - Cronbach’s alpha for NASA-TLX subscales
+- One-way ANOVA
+- Tukey HSD post-hoc tests
+- Levene’s test
+- Shapiro-Wilk test
+- Bayesian ANOVA
+
+### 4. NASA-TLX Subscale Analysis
+
+The following workload dimensions were analysed:
+
+- Mental demand
+- Physical demand
+- Temporal demand
+- Performance
+- Effort
+- Frustration
+
+### 5. Correlation Analysis
+
+Pearson correlations were calculated between:
+
+- Performance score
+- NASA-TLX total
+- SART total
+- Choice accuracy
+- Response time
+
+### 6. Reliability Analysis
+
+- Cronbach’s alpha for NASA-TLX subscales
 
 ---
 
@@ -128,17 +138,84 @@ The analysis was completed in **R** using the following packages:
 - **Effort** differed significantly across conditions.
 - **Performance score** was positively correlated with **choice accuracy**.
 - **Response time** was negatively correlated with **choice accuracy**.
-- NASA-TLX showed acceptable internal consistency.
+- NASA-TLX demonstrated acceptable internal consistency reliability.
 
 ---
 
 ## How to Run the Analysis
 
-### 1. Open the R script
+### 1. Open the R Script
+
 Load the analysis script in R or RStudio.
 
-### 2. Set the file path
+### 2. Set the File Path
+
 Update the Excel file path in the script:
 
 ```r
 file_path <- "C:/Users/brian/Downloads/Copy of Expt2_final.xlsx"
+````
+
+### 3. Run the Script
+
+Execute the script section by section, or run the entire script at once.
+
+---
+
+## Expected Outputs
+
+The script produces:
+
+* Summary tables
+* ANOVA tables
+* Tukey post-hoc results
+* Bayesian ANOVA output
+* Correlation matrices
+* Boxplots
+* Violin plots
+* Bar plots
+* Reliability statistics
+
+---
+
+## File Structure
+
+```text
+project/
+│
+├── data/
+│   └── Copy of Expt2_final.xlsx
+│
+├── scripts/
+│   └── analysis.R
+│
+├── output/
+│   ├── tables/
+│   └── figures/
+│
+└── README.md
+```
+
+---
+
+## Notes
+
+* Some imported values were converted from character to numeric.
+* Missing values introduced during coercion were handled as `NA`.
+* The study used a within-subjects design with repeated environment conditions.
+* Statistical significance was assessed at **α = 0.05**.
+
+---
+
+## Project Description (300 Characters)
+
+This project investigates how human supervisors select between specialist and adaptive multi-agent reinforcement-learning teams across environments with varying stag illness risk, examining performance, workload, situation awareness, choice accuracy, and decision-making behaviour using R.
+
+---
+
+## Citation Reminder
+
+If this README is used in a report or repository, include the full reference list in the project documentation or appendix.
+
+```
+```
